@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn server for staging.todoproductivity.site
+
+[Service]
+Restart=on-failure
+User=alim
+WorkingDirectory=/home/alim/sites/staging.todoproductivity.site
+EnvironmentFile=/home/alim/sites/staging.todoproductivity.site/.env
+
+ExecStart=/home/elspeth/sites/DOMAIN/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/staging.todoproductivity.site.socket \
+    superlists.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
