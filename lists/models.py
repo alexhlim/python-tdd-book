@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.core.urlresolvers import reverse
+from django.conf import settings
 from django.db import models
 
 
@@ -19,6 +20,7 @@ class List(models.Model):
         list_ = List.objects.create(owner=owner)
         Item.objects.create(text=first_item_text, list=list_)
         return list_
+
 
 
 class Item(models.Model):
