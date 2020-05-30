@@ -7,7 +7,7 @@ from selenium.common.exceptions import WebDriverException
 from .server_tools import reset_database
 import time
 
-MAX_WAIT = 10
+MAX_WAIT = 20
 
 
 def wait(fn):
