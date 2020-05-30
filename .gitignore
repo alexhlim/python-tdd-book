@@ -5,3 +5,4 @@ __pychache__
 *.pyc
 /static
 .env
+functional_tests/screendumps
